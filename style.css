@@ -1,0 +1,83 @@
+body {
+    background-color: #eaeaea;
+    user-select: none;
+    color: rgba(40, 40, 44, 0.5);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.wrapper_2 {
+    box-shadow: 13px 13px 20px #cbced1, -10px -10px 17px rgba(255, 255, 255, 0.7);
+    height: 550px;
+    width: 365px;
+    border-radius: 20px;
+    padding: 50px 30px;
+    box-sizing: border-box;
+    margin: 50px auto;
+    /* ^ выравнивание по середине*/
+}
+
+.display {
+    width: 100%;
+    height: 90px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #eaeaea;
+    border-radius: 10px;
+    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.5), -5px -5px 8px rgba(26, 24, 99, 0.2);
+    text-align: right;
+    color: rgba(55, 55, 59, 0.5);
+    font-weight: 700;
+    font-size: 30px;
+    padding: 15px;
+}
+
+.buttons {
+    /* Разместить кнопки в ряды можно с помощью float, flex, grid */
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    Вот эта херня не давала ИКВЭЛС занять 2 ячейки
+    */
+    grid-template-areas:
+        'clear_all clear division multiplicator'
+        'seven eight nine minus'
+        'four five six plus'
+        'one two three equals'
+        'zero zero demical equals';
+    grid-gap: 1em;
+    justify-content: space-around;
+    margin-top: 44px;
+}
+
+.key.equals {
+    grid-area: equals;
+    height: 100%;
+}
+
+.key.zero {
+    grid-area: zero;
+    width: 100%;
+}
+
+.key {
+    height: 50px;
+    width: 50px;
+    background: #EAEAEA;
+    border-radius: 10px;
+    box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.5), 5px 5px 8px rgba(26, 24, 99, 0.25);
+
+    text-align: center;
+    /*выравнирание текста по центру*/
+    line-height: 50px;
+    /*выравнирание текста по центру*/
+    cursor: pointer;
+}
+
+.key:hover {
+    filter: brightness(92%);
+}
+
+.key:active {
+    filter: brightness(80%);
+}
