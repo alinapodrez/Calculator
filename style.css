@@ -4,17 +4,19 @@ body {
     color: rgba(40, 40, 44, 0.5);
     font-size: 18px;
     font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .wrapper_2 {
-    box-shadow: 13px 13px 20px #cbced1, -10px -10px 17px rgba(255, 255, 255, 0.7);
+    box-shadow: 12px 12px 25px rgba(22, 27, 29, 0.2), -12px -12px 25px rgba(250, 251, 255, 1.0);
     height: 550px;
     width: 365px;
     border-radius: 20px;
     padding: 50px 30px;
     box-sizing: border-box;
-    margin: 50px auto;
-    /* ^ выравнивание по середине*/
 }
 
 .display {
@@ -24,12 +26,16 @@ body {
     border: none;
     background-color: #eaeaea;
     border-radius: 10px;
-    box-shadow: 5px 5px 8px rgba(255, 255, 255, 0.5), -5px -5px 8px rgba(26, 24, 99, 0.2);
+    box-shadow: inset -5px -5px 15px rgb(250, 251, 255), inset 5px 5px 10px rgba(22, 27, 29, 0.2);
     text-align: right;
     color: rgba(55, 55, 59, 0.5);
     font-weight: 700;
     font-size: 30px;
     padding: 15px;
+}
+
+input:focus {
+    outline: none;
 }
 
 .buttons {
@@ -65,19 +71,19 @@ body {
     width: 50px;
     background: #EAEAEA;
     border-radius: 10px;
-    box-shadow: -5px -5px 8px rgba(255, 255, 255, 0.5), 5px 5px 8px rgba(26, 24, 99, 0.25);
-
-    text-align: center;
-    /*выравнирание текста по центру*/
-    line-height: 50px;
-    /*выравнирание текста по центру*/
+    box-shadow: -3px -3px 6px rgb(250, 251, 255), 3px 3px 6px rgba(22, 27, 29, 0.23);
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .key:hover {
     filter: brightness(92%);
+
 }
 
 .key:active {
-    filter: brightness(80%);
+    filter: brightness(89%);
+    box-shadow: inset -3px -3px 6px rgb(250, 251, 255), inset 3px 3px 6px rgba(22, 27, 29, 0.23);
 }
