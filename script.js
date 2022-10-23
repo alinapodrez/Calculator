@@ -66,10 +66,10 @@ clearAll.addEventListener("click", (e) => {
 });
 
 const clearF = (op) => {
-    if (op == "CE") {
+    if (op == "CE") {    // [CE] удаляет только последнее введённое число
         display.value = "0";
         memoryNewNumber = true;
-    } else if (op == "C") {
+    } else if (op == "C") { // [C] все вычисления будут очищены
         display.value = "0";
         memoryNewNumber = true;
         memoryPendingOperation = "0";
@@ -94,10 +94,3 @@ const decimalF =() => {
     display.value = localDecimalMemory;
 };
 
-result.addEventListener("click", (e) => {
-    resultF(e.target.textContent);
-});
-
-const resultF = () =>{
-
-};
